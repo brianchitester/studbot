@@ -8,6 +8,5 @@
   "hubot-maps",
   "hubot-redis-brain",
   "hubot-rules",
-  "hubot-youtube",
-  "yo.coffee"
+  "hubot-youtube"
 ]
