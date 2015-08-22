@@ -1,3 +1,3 @@
 module.exports = (robot) ->
-	robot.hear /(yo), (msg) ->
+	robot.hear /(yo)/i, (msg) ->
 	msg.send "yo"
