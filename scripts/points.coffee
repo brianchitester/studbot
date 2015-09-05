@@ -8,7 +8,7 @@ module.exports = (robot) ->
 		nick: 0
 		greyson: 0
 
-	robot.hear /studbot give (.*) (\d*) points/i, (msg) ->
+	robot.respond /give (.*) (\d*) points/i, (msg) ->
 		msg = msg.split(" ")
 		contestant = msg[2].toLower();
 		points = msg[3]
