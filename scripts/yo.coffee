@@ -1,5 +1,24 @@
+# Description:
+#   responds to things
+#
+# Dependencies:
+#
+#
+# Configuration:
+#
+#
+# Commands:
+#  sup - responds with sup
+#  yo - responds with yo
+#
+# Author:
+#
+#
+# Contributors:
+#   tparnell
+
 module.exports = (robot) ->
-	robot.hear /(yo studbot)/i, (msg) ->
+	robot.respond /yo/i, (msg) ->
 		msg.send "yo"
-	robot.hear /(sup studbot)/i, (msg) ->
+	robot.respond /sup/i, (msg) ->
 		msg.send "sup"
