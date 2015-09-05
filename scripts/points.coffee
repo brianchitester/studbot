@@ -17,7 +17,7 @@ module.exports = (robot) ->
 		else
 			scoreboard[contestant] = points
 
-		msg.send "Ok, " +contestant+ " now has "+ pscoreboard[contestant] + "points."
+		msg.send "Ok, " +contestant+ " now has "+ scoreboard[contestant] + "points."
 
 	robot.hear /scoreboard/i, (msg) ->
 		msg.send scoreboard
