@@ -1,10 +1,13 @@
 module.exports = (robot) ->
-	scoreboard = {
-		"chris": 10,
-		"brian" -5,
-		"ravi": 1
-	}
-	
+	scoreboard =
+		chris: 10
+		ravi: 1
+		brian: -5
+		tommy: 0
+		christina: 0
+		nick: 0
+		greyson: 0
+
 	robot.hear /studbot give (.*) (\d*) points/i, (msg) ->
 		msg = msg.split(" ")
 		contestant = msg[2].toLower();
