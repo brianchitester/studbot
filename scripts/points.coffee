@@ -1,12 +1,14 @@
 module.exports = (robot) ->
-	scoreboard =
-		chris: 10
-		ravi: 1
-		brian: -5
-		tommy: 0
-		christina: 0
-		nick: 0
-		greyson: 0
+	scoreboard = robot.brain.get('scoreBoard')
+	if(!scoreboard)
+		scoreboard =
+			chris: 0
+			ravi: 0
+			brian: 0
+			tommy: 0
+			christina: 0
+			nick: 0
+			greyson: 0
 
 	robot.respond /give (.*) (\d*) points/i, (msg) ->
 		
@@ -17,6 +19,7 @@ module.exports = (robot) ->
 		else
 			scoreboard[contestant] = points
 
+		robot.brain.set 'scoreBoard', scoreboard
 		msg.send "Ok, " + contestant + " now has "+ scoreboard[contestant] + " points."
 
 	robot.hear /scoreboard/i, (msg) ->
