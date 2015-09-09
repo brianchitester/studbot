@@ -9,19 +9,18 @@ module.exports = (robot) ->
 		greyson: 0
 
 	robot.respond /give (.*) (\d*) points/i, (msg) ->
-		msg = msg.split(" ")
-		contestant = msg[2].toLowerCase();
-		points = msg[3]
+		
+		contestant = msg.match[1]
+		points = parseInt( msg.match[2], 10 )
 		if (scoreboard[contestant])
 			scoreboard[contestant] = scoreboard[contestant] + points
 		else
 			scoreboard[contestant] = points
 
-		msg.send "Ok, " + contestant + " now has "+ scoreboard[contestant] + "points."
+		msg.send "Ok, " + contestant + " now has "+ scoreboard[contestant] + " points."
 
 	robot.hear /scoreboard/i, (msg) ->
         msg.send '\n\nCURRENT STANDINGS'
         msg.send '-----------------'
         for k,v of scoreboard
             msg.send k + ': ' + v
-
