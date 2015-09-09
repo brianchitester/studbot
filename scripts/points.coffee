@@ -20,4 +20,8 @@ module.exports = (robot) ->
 		msg.send "Ok, " + contestant + " now has "+ scoreboard[contestant] + "points."
 
 	robot.hear /scoreboard/i, (msg) ->
-		msg.send scoreboard
+        msg.send '\n\nCURRENT STANDINGS'
+        msg.send '-----------------'
+        for k,v of scoreboard
+            msg.send k + ': ' + v
+
