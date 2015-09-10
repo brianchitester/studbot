@@ -10,8 +10,8 @@ module.exports = (robot) ->
 			nick: 0
 			greyson: 0
 
-	robot.respond /give (.*) (\d*) points/i, (msg) ->
-		
+	robot.respond /give (.*) (-?\d*) point(s*)/i, (msg) ->
+
 		contestant = msg.match[1]
 		points = parseInt( msg.match[2], 10 )
 		if (scoreboard[contestant])
