@@ -25,7 +25,6 @@ module.exports = (robot) ->
 		msg.send giver + " gave " + contestant + " " + points + " points."
 
 	robot.hear /scoreboard/i, (msg) ->
-		console.log msg.message
 		message = 'CURRENT STANDINGS'
 		message = message + '\n==========================================='
 		scoreboardArray = do (scoreboard) ->
