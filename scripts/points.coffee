@@ -5,7 +5,7 @@ module.exports = (robot) ->
 
 	robot.respond /give (.*) (-?\d*) point(s*)/i, (msg) ->
 
-		contestant = msg.match[1]
+		contestant = msg.match[1].toLowerCase()
 		giver = msg.message.user.name.toLowerCase()
 		points = parseInt( msg.match[2], 10 )
 		if (scoreboard[contestant])
@@ -25,8 +25,8 @@ module.exports = (robot) ->
 		msg.send giver + " gave " + contestant + " " + points + " points."
 
 	robot.hear /scoreboard/i, (msg) ->
-		message = '\n\nCURRENT STANDINGS'
-		message = message + '\n-----------------'
+		message = 'CURRENT STANDINGS'
+		message = message + '\n==========================================='
 		scoreboardArray = do (scoreboard) ->
 			keys = Object.keys(scoreboard).sort (a, b) -> scoreboard[b] - scoreboard[a]
 			{name, count: scoreboard[name]} for name in keys
