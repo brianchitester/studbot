@@ -2,4 +2,6 @@ G = require('gizoogle')
 
 module.exports = (robot) ->
   robot.respond /gizoogle (.*)/ , (msg) ->
-    msg.send G.string(msg.match[1])
+    G.string(msg.match[1], (error, string) ->
+    	if(!error)
+    		msg.send string)
