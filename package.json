@@ -21,7 +21,9 @@
     "hubot-shipit": "^0.2.0",
     "hubot-situation": "0.0.6",
     "hubot-youtube": "^0.1.2",
-    "time": "^0.11.3"
+    "time": "^0.11.3",
+    "hubot-cron": ">= 0.1.0",
+    "gizoogle": "0.0.3"
   },
   "engines": {
     "node": "0.10.x"
