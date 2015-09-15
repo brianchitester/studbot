@@ -23,7 +23,7 @@
     "hubot-youtube": "^0.1.2",
     "time": "^0.11.3",
     "hubot-cron": ">= 0.1.0",
-    "gizoogle": "0.0.3"
+    "cheerio": "~0.19.0"
   },
   "engines": {
     "node": "0.10.x"
