@@ -1,6 +1,9 @@
 [
-    "fail(|s|ing|ed)",
+    "fail(|s|ing|ed|ure|ures)",
     "bug(|s|ging|ged)",
     "broken",
-    "error(|s)"
+    "problem(|s)",
+    "error(|s)",
+    "(blew|blowing) up",
+    "issue(|s)"
 ]
