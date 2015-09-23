@@ -1,26 +1,11 @@
 
-cheerio = require('cheerio');
-module.exports = (robot) ->
-  objectList = [
-    'studio',
-    'monolith',
-    'jenkins',
-    'unit tests',
-    'build',
-    'job',
-    ''
-  ]
-  errorList = [
-    'failed',
-    'bug',
-    'fails',
-    'broken',
-    'errors',
-    'error'
-  ]
+cheerio = require('cheerio')
+deliverables = require './data/deliverables.json'
+errors = require './data/errors.json'
 
-  objectRegex = objectList.join('|')
-  errorRegex = errorList.join('|')
+module.exports = (robot) ->
+  objectRegex = deliverables.join('|')
+  errorRegex = errors.join('|')
   regexTemplate = '^.*?\\b(objectRegex)\\b.*?\\b(errorRegex)\\b.*?$'
   regexTemplate = regexTemplate.replace 'objectRegex', objectRegex
   regexTemplate = regexTemplate.replace 'errorRegex', errorRegex
