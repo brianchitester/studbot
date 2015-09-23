@@ -5,5 +5,7 @@
     "problem(|s)",
     "error(|s)",
     "(blew|blowing) up",
-    "issue(|s)"
+    "issue(|s)",
+    "exception(|s)",
+    "fault(|s)"
 ]
