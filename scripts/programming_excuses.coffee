@@ -4,10 +4,10 @@ deliverables = require './data/deliverables.json'
 errors = require './data/errors.json'
 
 module.exports = (robot) ->
-  objectRegex = deliverables.join('|')
+  deliverableRegex = deliverables.join('|')
   errorRegex = errors.join('|')
-  regexTemplate = '^.*?\\b(objectRegex)\\b.*?\\b(errorRegex)\\b.*?$'
-  regexTemplate = regexTemplate.replace 'objectRegex', objectRegex
+  regexTemplate = '(?=.*(deliverableRegex))(?=.*(errorRegex))'
+  regexTemplate = regexTemplate.replace 'deliverableRegex', deliverableRegex
   regexTemplate = regexTemplate.replace 'errorRegex', errorRegex
   regex = new RegExp regexTemplate, 'gi'
 
