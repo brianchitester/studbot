@@ -8,7 +8,9 @@ module.exports = (robot) ->
 		teams = Team.all()
 		alertString = ""
 		for team in teams
+			msg.send team.name
 			if(team.name == teamName)
+				msg.send "found"
 				for user in team.members
 					nameLookUp = robot.brain.userForFuzzyName(user)
 					if(nameLookUp)
