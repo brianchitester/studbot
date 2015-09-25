@@ -5,8 +5,8 @@ module.exports = (robot) ->
 
 	robot.respond /give (.*) (-?\d*) point(s*)/i, (msg) ->
 
-		contestant = msg.match[1].toLowerCase()
-		giver = msg.message.user.name.toLowerCase()
+		contestant = msg.match[1].toLowerCase().substring(1)
+		giver = msg.message.user.mention_name.toLowerCase()
 		points = parseInt( msg.match[2], 10 )
 		if (scoreboard[contestant])
 			scoreboard[contestant] = scoreboard[contestant] + points
