@@ -10,5 +10,6 @@
   "hubot-rules",
   "hubot-youtube",
   "hubot-cron",
-  "hubot-situation"
+  "hubot-situation",
+  "hubot-team"
 ]
