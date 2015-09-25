@@ -34,4 +34,5 @@ module.exports = (robot) ->
             message = message + '\n' + i.name + ': ' + i.count
         msg.send message
         for k of (robot.brain.data.users)
-        	msg.send robot.brain.data.users[k]['mention_name']     
+        	if(robot.brain.data.users[k]['mention_name'] == msg.message.user.mention_name)
+        		msg.send msg.message.user.name   
