@@ -13,8 +13,8 @@ module.exports = (robot) ->
 					nameLookUp =  @robot.brain.usersForFuzzyName user
 					if(nameLookUp)
 						for k of (robot.brain.data.users)
-        					if(robot.brain.data.users[k]['name'] == nameLookUp.name)
-        						alertString = alertString + " @" + robot.brain.data.users[k]['mention_name']
+							if(robot.brain.data.users[k]['name'] == nameLookUp[0].name)
+        						alertString = alertString + "@" + robot.brain.data.users[k]['mention_name'] + " "
 				if(alertString)
 					msg.send alertString
 
