@@ -7,12 +7,10 @@ module.exports = (robot) ->
 		teamName = msg.match[0].substring(1)
 		teams = Team.all()
 		alertString = ""
-		for team in teams
-			msg.send team.name
-			if(team.name == teamName)
-				msg.send "found"
-				for user in team.members
-					nameLookUp = robot.brain.userForFuzzyName(user)
+		for key, teamData of Team.store()
+			if(key == teamName)
+				for user in teamData
+					nameLookUp =  @robot.brain.usersForFuzzyName user
 					if(nameLookUp)
 						alertString = alertString + " @" + nameLookUp.mention_name
 				msg.send alertString
