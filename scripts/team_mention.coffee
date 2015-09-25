@@ -12,6 +12,9 @@ module.exports = (robot) ->
 				for user in teamData
 					nameLookUp =  @robot.brain.usersForFuzzyName user
 					if(nameLookUp)
-						alertString = alertString + " @" + nameLookUp.mention_name
-				msg.send alertString
+						for k of (robot.brain.data.users)
+        					if(robot.brain.data.users[k]['name'] == nameLookUp.name)
+        						alertString = alertString + " @" + robot.brain.data.users[k]['mention_name']
+				if(alertString)
+					msg.send alertString
 
