@@ -33,3 +33,5 @@ module.exports = (robot) ->
 		for i in scoreboardArray
             message = message + '\n' + i.name + ': ' + i.count
         msg.send message
+        for k of (robot.brain.data.users)
+        	msg.send robot.brain.data.users[k]['mention_name']     
