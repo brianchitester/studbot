@@ -5,8 +5,8 @@ module.exports = (robot) ->
 
 	robot.respond /give (.*) (-?\d*) point(s*)/i, (msg) ->
 
-		contestant = msg.match[1].toLowerCase()
-		giver = msg.message.user.name.toLowerCase()
+		contestant = msg.match[1].toLowerCase().substring(1)
+		giver = msg.message.user.mention_name.toLowerCase()
 		points = parseInt( msg.match[2], 10 )
 		if (scoreboard[contestant])
 			scoreboard[contestant] = scoreboard[contestant] + points
@@ -33,3 +33,6 @@ module.exports = (robot) ->
 		for i in scoreboardArray
             message = message + '\n' + i.name + ': ' + i.count
         msg.send message
+        for k of (robot.brain.data.users)
+        	if(robot.brain.data.users[k]['mention_name'] == msg.message.user.mention_name)
+        		msg.send msg.message.user.name   

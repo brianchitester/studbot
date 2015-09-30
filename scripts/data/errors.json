@@ -1,0 +1,11 @@
+[
+    "fail(|s|ing|ed|ure|ures)",
+    "bug(|s|ging|ged)",
+    "broke(|n)",
+    "problem(|s)",
+    "error(|s)",
+    "(blew|blowing) up",
+    "issue(|s)",
+    "exception(|s)",
+    "fault(|s)"
+]
