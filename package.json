@@ -5,6 +5,9 @@
   "author": "Bob Bergman <rbergman@atlassian.com>",
   "description": "A simple helpful robot for your Company",
   "dependencies": {
+    "bad-words": "1.2.1",
+    "cheerio": "~0.19.0",
+    "form-data": "^0.2.0",
     "hubot": "^2.12.0",
     "hubot-cron": ">= 0.1.0",
     "hubot-diagnostics": "0.0.1",
@@ -21,10 +24,7 @@
     "hubot-shipit": "^0.2.0",
     "hubot-situation": "0.0.6",
     "hubot-youtube": "^0.1.2",
-    "time": "^0.11.3",
-    "hubot-cron": ">= 0.1.0",
-    "cheerio": "~0.19.0",
-    "bad-words": "1.2.1"
+    "time": "^0.11.3"
   },
   "engines": {
     "node": "0.10.x"
