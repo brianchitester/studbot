@@ -12,5 +12,7 @@
     "rendering",
     "box",
     "machine",
-    "local"
+    "local",
+    "ivy",
+    "artifactory"
 ]
