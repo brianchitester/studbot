@@ -14,5 +14,6 @@
     "machine",
     "local",
     "ivy",
-    "artifactory"
+    "artifactory",
+    "(|vbu)stash"
 ]
