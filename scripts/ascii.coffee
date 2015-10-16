@@ -10,4 +10,4 @@ module.exports = (robot) ->
     			msg.send "Request problem:" + res.statusCode
     		$ = cheerio.load(body.toString('utf8'))
     		msg.send $('pre').val())
-    		
+
