@@ -2,7 +2,7 @@ cheerio = require('cheerio')
 querystring = require('querystring')
 
 module.exports = (robot) ->
-  robot.respond /gizoogle (.*)/ , (msg) ->
+  robot.respond /ascii (.*)/ , (msg) ->
   	robot.http("http://ascii-text.com/online-ascii-banner-text-generator/fire_font-s/" + msg.match[1])
     	.header('Content-Type','application/x-www-form-urlencoded')
     	.post() (err, res, body) ->
