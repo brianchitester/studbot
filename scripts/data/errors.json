@@ -10,6 +10,6 @@
     "fault(|s)",
     "down",
     "not working",
-    "does(n't|\snot) work",
-    "do(n't|\snot) work"
+    "does(n't| not) work",
+    "do(n't| not) work"
 ]
