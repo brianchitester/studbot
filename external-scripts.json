@@ -12,5 +12,6 @@
   "hubot-cron",
   "hubot-situation",
   "hubot-team",
-  "hubot-adventuretime"
+  "hubot-adventuretime",
+  "hubot-jstips"
 ]
