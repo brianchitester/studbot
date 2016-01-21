@@ -13,5 +13,6 @@
   "hubot-situation",
   "hubot-team",
   "hubot-adventuretime",
-  "hubot-jstips"
+  "hubot-jstips",
+  "hubot-rss-reader"
 ]
