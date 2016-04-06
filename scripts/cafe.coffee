@@ -10,7 +10,7 @@ module.exports = (robot) ->
 	          resp.send "Request came back" + res.statusCode
 	          return
 	        $ = cheerio.load(body);
-	        url = $(':header:contains(275)').parent().parent().find('.img-menu > img').attr('src')
+	        url = $(':header:contains(275)').parent().parent().find('a[class=btn-pdf]').attr('href')
 	        resp.send url
 
    robot.respond /cafe (entree|veggie|action|grill|deli|salad|soup)/i, (resp) ->
