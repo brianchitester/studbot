@@ -12,6 +12,5 @@
   "hubot-cron",
   "hubot-situation",
   "hubot-team",
-  "hubot-jstips",
-  "hubot-rss-reader"
+  "hubot-jstips"
 ]
